@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  {% for flashMessage in app.session.flashbag.get('notice') %}
+    {{ flashMessage }}
+{% endfor %}
+
+  {{ form_start(form) }}
+  {{ form_widget(form) }}
+  {{ form_end(form) }}
+{% endblock %}
+
